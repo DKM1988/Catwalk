@@ -31,5 +31,15 @@ class DefaultController extends Controller
         return new Response($html);
 
     }
-    
+
+    /**
+     * @Route("/new_fault", name="New Fault")
+     */
+    public function newFault()
+    {
+        $templating = $this->container->get('templating');
+        $html = $templating->render("default/newfault.html.twig");
+
+        return new Response($html);
+    }
 }

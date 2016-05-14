@@ -1,0 +1,66 @@
+{% block body %}
+
+<div id="wrapper">
+    <div id="container">
+        <h1>Log a new CCTV Camera Fault</h1>
+            <fieldset>
+                <label>Camera Number</label>
+                <input class="cameraNumber" type="text" id="cameraNumber"/>
+                <br>
+                <label>Location</label>
+                <input class="location" type="text" id="dss"/>
+                <br>
+                <label>DSS</label>
+                <input class="dss" type="text" id="location"/>
+                <br>
+                <label>Description of Fault</label>
+                <input class="description" type="text" id="location"/>
+
+            </fieldset>
+    </div>
+</div>
+
+
+
+{% endblock %}
+<style>
+    /*
+    * containers
+    */
+    body { background: #880000; font: 18px/1.5 sans-serif; }
+    #wrapper { background: white; margin: 10em auto; width: 500px; height: 450px; padding: 5px }
+    #container { padding: 25px; }
+    fieldset { border: double; border-color: orange; height: 200px}
+    /*
+    label headers
+    */
+    h1 { font-size: 30px; font-family: "Times New Roman"; text-align: center}
+    h2 {}
+    label {font-size: 20px; padding: 0px; font-family: "Times New Roman"; }
+    
+    /*
+    * text box classes
+    */
+    .cameraNumber {
+        position: relative;
+        width: 200px;
+        left: 40px;
+    }
+    .dss {
+        position: relative;
+        width: 200px;
+        left: 135px;
+    }
+    .location {
+        position: relative;
+        width: 200px;
+        left: 100px;
+    }
+    .description {
+        position: relative;
+        width: 200px;
+        left: 10px;
+    }
+
+
+</style>
