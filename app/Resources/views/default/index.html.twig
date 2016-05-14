@@ -20,6 +20,9 @@
                     example so the aim is to convert it to PHP and have it communicate with a MySQL database.
                 </h4>
                 <a href="http://localhost:8000/login" class="admin">Administration Panel</a>
+                <a href="http://localhost:8000/newFault" class="logFault">Log CCTV Fault</a>
+                <a href="#" class="editFault">Edit Open Fault</a>
+                <a href="#" class="closeFault">Close Fault</a>
             </div>
         </div>
 
@@ -58,21 +61,104 @@
     }
 
     .admin {
-        background-color: #0000F0;
-        border-radius: 30px;
-        border: 1px solid;
-        display: inline-block;
-        cursor: hand;
-        color: #FFFFFF;
-        font-family: "Times New Roman";
-        font-size: 15px;
-        padding: 16px 31px;
-        text-decoration: none;
-        position: relative;
-        left: 40px;
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
     }
     .admin:hover {
-        background: green;
+        background-color:#b34332;
     }
+    .admin:active {
+        position:relative;
+        top:1px;
+    }
+
+    .logFault {
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+    }
+    .logFault:hover {
+        background-color:#b34332;
+    }
+    .logFault:active {
+        position:relative;
+        top:1px;
+    }
+
+    .editFault {
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+    }
+    .editFault:hover {
+        background-color:#b34332;
+    }
+    .editFault:active {
+        position:relative;
+        top:1px;
+    }
+
+    .closeFault {
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+    }
+    .closeFault:hover {
+        background-color:#b34332;
+    }
+    .closeFault:active {
+        position:relative;
+        top:1px;
+    }
+
+
+
+
+
 </style>
 {% endblock %}
