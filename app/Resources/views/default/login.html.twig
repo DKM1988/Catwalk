@@ -1,0 +1,29 @@
+{% block body%}
+
+    <div id="wrapper">
+        <div id="container">
+            <h1>Login Required</h1>
+            <fieldset>
+                <p>
+                    <label>Username</label>
+                    <input type="text" id="username"/>
+                    <label>Password</label>
+                    <input type="text" id="password" />
+                </p>
+            </fieldset>
+        </div>
+    </div>
+
+
+{% endblock body%}
+
+<style>
+    body { background: #880000; font: 18px/1.5 sans-serif; }
+    #wrapper { background: white; margin: 10em auto; width: 380px; height: 300px }
+    #container { padding: 2em; }
+    legend { font-size: 20px}
+    fieldset { border: double; border-color: #910b8e }
+    label {font-size: 15px; padding: 10px}
+    h1 { font-size: 25px; text-align: center; }
+    h2 { font-size: 18px; text-align: left; }
+</style>
