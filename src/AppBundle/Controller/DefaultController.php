@@ -18,13 +18,5 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
-
-    /**
-     * @Route(/admin)
-     */
-    public function adminLogin()
-    {
-        $templating = $this->get('templating');
-
-    }
+    
 }
