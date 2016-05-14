@@ -19,9 +19,12 @@
                     designed in C# and it had its limitations. It used SQLCe and could only run on Windows systems for
                     example so the aim is to convert it to PHP and have it communicate with a MySQL database.
                 </h4>
+                <a href="http://localhost:8000/login" class="admin">Administration Panel</a>
             </div>
-
         </div>
+
+
+
     </div>
 {% endblock %}
 
@@ -52,6 +55,24 @@
         @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+    }
+
+    .admin {
+        background-color: #0000F0;
+        border-radius: 30px;
+        border: 1px solid;
+        display: inline-block;
+        cursor: hand;
+        color: #FFFFFF;
+        font-family: "Times New Roman";
+        font-size: 15px;
+        padding: 16px 31px;
+        text-decoration: none;
+        position: relative;
+        left: 40px;
+    }
+    .admin:hover {
+        background: green;
     }
 </style>
 {% endblock %}
