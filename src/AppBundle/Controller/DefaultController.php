@@ -33,7 +33,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/new_fault", name="New Fault")
+     * @Route("/newfault", name="New Fault")
      */
     public function newFault()
     {
