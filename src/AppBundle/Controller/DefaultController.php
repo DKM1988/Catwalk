@@ -14,6 +14,8 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
@@ -21,7 +23,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/login", name="admin_login")
+     * @Route("/login", name="Admin Login")
      */
     public function adminLogin()
     {
@@ -29,17 +31,24 @@ class DefaultController extends Controller
         $html = $templating->render('default/login.html.twig');
 
         return new Response($html);
-
     }
 
     /**
-     * @Route("/newfault", name="New Fault")
+     * @Route("/new_fault", name="New Fault")
      */
     public function newFault()
     {
         $templating = $this->container->get('templating');
         $html = $templating->render("default/newfault.html.twig");
 
+        $connect = mysqli_connect();
+        
+
         return new Response($html);
+    }
+    
+    public function mysqlTest()
+    {
+        
     }
 }
