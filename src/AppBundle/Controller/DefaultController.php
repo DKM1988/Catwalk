@@ -14,24 +14,13 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        
-
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
 
-    /**
-     * @Route("/login", name="Admin Login")
-     */
-    public function adminLogin()
-    {
-        $templating = $this->container->get("templating");
-        $html = $templating->render('default/login.html.twig');
-
-        return new Response($html);
-    }
+    
 
     /**
      * @Route("/new_fault", name="New Fault")
@@ -41,8 +30,7 @@ class DefaultController extends Controller
         $templating = $this->container->get('templating');
         $html = $templating->render("default/newfault.html.twig");
 
-        
-        
+
 
         return new Response($html);
     }

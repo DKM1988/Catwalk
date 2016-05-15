@@ -1,23 +1,26 @@
-
-{% block body%}
-    <title>Login</title>
+{% block body %}
     <div id="wrapper">
         <div id="container">
-            <h1>Login Required</h1>
-            <fieldset>
-                <p>
-                    <label>Username</label>
-                    <input class="username" type="text" id="username"/>
-                    <label>Password</label>
-                    <input class="password" type="password" id="password" />
+            <form action="{{ path('login') }}" method="post">
+                <fieldset>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="_password" />
+                    {#
+                    If you want to control the URL the user
+                    is redirected to on success (more details below)
+                    <input type="hidden" name="_target_path" value="/account" />
+                    #}
 
-                    <a href="#" class="login">Login</a>
-                    <a href="#" class="forgotPassword">Forgot Password</a>
-                </p>
-            </fieldset>
+                    <button class="login" type="submit">login</button>
+                    <button class="forgotPassword" type="reset">Reset</button>
+                </fieldset>
+            </form>
         </div>
     </div>
-{% endblock body%}
+
+{% endblock %}
 
 <style>
     body { background: #880000; font: 18px/1.5 sans-serif; }
