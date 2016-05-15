@@ -8,6 +8,81 @@
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="mynethqk_catwalk"/>
+      <table id="2" parent="1" name="tblFault"/>
+      <table id="3" parent="1" name="tblUser"/>
+      <column id="4" parent="2" name="jobNumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="5" parent="2" name="dateEntered">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="6" parent="2" name="dateCompleted">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="7" parent="2" name="employeeId_entered">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="employeeId_assigned">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="9" parent="2" name="camera">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="10" parent="2" name="location">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="11" parent="2" name="dss">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="12" parent="2" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="13" parent="2" name="equipment">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="14" parent="2" name="PRIMARY">
+        <columns>jobNumber</columns>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="3" name="employeeId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="16" parent="3" name="firstName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="17" parent="3" name="lastName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="18" parent="3" name="idNumber">
+        <data-type>int(13)</data-type>
+      </column>
+      <column id="19" parent="3" name="isAdmin">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="20" parent="3" name="users_idNumber_uindex">
+        <columns>idNumber</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="21" parent="3" name="PRIMARY">
+        <columns>employeeId</columns>
+        <primary>1</primary>
+      </key>
+      <key id="22" parent="3" name="users_idNumber_uindex">
+        <columns>idNumber</columns>
+        <underlying-index>users_idNumber_uindex</underlying-index>
+      </key>
     </database-model>
   </data-source>
 </component>
