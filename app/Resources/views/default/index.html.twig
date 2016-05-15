@@ -20,11 +20,14 @@
                     example so the aim is to convert it to PHP and have it communicate with a MySQL database.
                 </h4>
                 <a href="http://localhost:8000/login" class="admin">Administration Panel</a>
-                <a href="http://localhost:8000/new_fault" class="logFault">Log CCTV Fault</a>
+                <a href="http://localhost:8000/new_fault" class="logFault">Log New Fault</a>
                 <a href="#" class="editFault">Edit Open Fault</a>
                 <a href="#" class="closeFault">Close Fault</a>
                 <br>
-                Database Status: {{ status }}
+            </div>
+            <div id="databaseStatus">
+                <p></p>
+                Database Status: Online
             </div>
         </div>
 
@@ -43,7 +46,7 @@
     a { color: #0000F0; }
     a:hover { text-decoration: none; }
     code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
-    #wrapper { background: white; margin: 1em auto; max-width: 800px; width: 95%; }
+    #wrapper { background: #D4D4D4; margin: 1em auto; max-width: 800px; width: 95%; }
     #container { padding: 2em; }
     #welcome, #status { margin-bottom: 2em; }
     #welcome h1 span { display: block; font-size: 75%; }
