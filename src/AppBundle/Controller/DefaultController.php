@@ -41,7 +41,7 @@ class DefaultController extends Controller
         $templating = $this->container->get('templating');
         $html = $templating->render("default/newfault.html.twig");
 
-        $connect = mysqli_connect();
+        
         
 
         return new Response($html);

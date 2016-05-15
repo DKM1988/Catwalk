@@ -17,7 +17,8 @@
                 <input class="description" type="text" id="location"/>
 
                 <a href="#" class="logFault">Log Fault</a>
-
+                <a hfrf="http://localhost:8000" class="clear">Clear Form</a>
+                <a href="http://localhost:8000/" class="home">Home</a>
             </fieldset>
     </div>
 </div>
@@ -28,15 +29,34 @@
     * containers
     */
     body { background: #880000; font: 18px/1.5 sans-serif; }
-    #wrapper { background: white; margin: 10em auto; width: 500px; height: 450px; padding: 5px }
+    #wrapper {
+        background: #D4D4D4;
+        margin: 9em auto;
+        width: 500px;
+        height: 400px;
+        padding: 5px }
     #container { padding: 25px; }
     fieldset { border: double; border-color: orange; height: 200px; padding-top: 20px; }
     /*
     label headers
     */
-    h1 { font-size: 30px; font-family: "Times New Roman"; text-align: center}
-    h2 {}
-    label {font-size: 20px; padding: 0px; font-family: "Times New Roman"; }
+    h1 {
+        font-size: 30px;
+        font-family: "Times New Roman";
+        text-align: center;
+        font-style: italic;
+        font-weight: bold}
+    h2 {
+
+    }
+    label {
+        font-size: 20px;
+        padding: 0px;
+        font-family: "Times New Roman";
+        color: #CC7832;
+        font-style: italic;
+        font-weight: bold
+    }
 
     /*
     * text box classes
@@ -45,88 +65,110 @@
         position: relative;
         width: 200px;
         left: 40px;
+        text-align: center;
+        text-transform: uppercase;
     }
     .dss {
         position: relative;
         width: 200px;
-        left: 135px;
+        left: 141px;
+        text-align: center;
+        text-transform: uppercase;
     }
     .location {
         position: relative;
         width: 200px;
-        left: 100px;
+        left: 105px;
+        text-align: center;
+        text-transform: uppercase;
     }
     .description {
         position: relative;
         width: 200px;
         left: 10px;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     /*
     * Buttons
     */
     .logFault {
-        -moz-box-shadow: 0px 1px 0px 0px #fff6af;
-        -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
-        box-shadow: 0px 1px 0px 0px #fff6af;
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
-        background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-        background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-        background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-        background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-        background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
-        background-color:#ffec64;
-        -moz-border-radius:6px;
-        -webkit-border-radius:6px;
-        border-radius:6px;
-        border:1px solid #ffaa22;
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
         display:inline-block;
         cursor:pointer;
-        color:#333333;
+        color:#ffffff;
         font-family:Arial;
         font-size:15px;
         font-weight:bold;
-        padding:6px 24px;
+        padding:9px 23px;
         text-decoration:none;
-        text-shadow:0px 1px 0px #ffee66;
-
+        text-shadow:0px -1px 0px #7a2a1d;
+        position: relative;
+        top: 28px;
     }
     .logFault:hover {
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
-        background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-        background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-        background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-        background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-        background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
-        background-color:#ffab23;
-
+        background-color:#b34332;
     }
     .logFault:active {
         position:relative;
-        top:1px;
-
+        top:29px;
     }
 
     .clear {
-
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+        position: relative;
+        top: 28px;
     }
     .clear:hover {
-
+        background-color:#b34332;
     }
     .clear:active {
-
+        position:relative;
+        top:29px;
     }
 
     .home {
-
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+        position: relative;
+        top: 28px;
     }
     .home:hover {
-
+        background-color:#b34332;
     }
     .home:active {
-
+        position:relative;
+        top:29px;
     }
 </style>
 
