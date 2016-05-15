@@ -2,6 +2,7 @@
     <div id="wrapper">
         <div id="container">
             <form action="{{ path('login') }}" method="post">
+                <h1>Login Required</h1>
                 <fieldset>
                     <label for="username">Username</label>
                     <input type="text" id="username" name="_username" value="{{ last_username }}" />
@@ -12,18 +13,16 @@
                     is redirected to on success (more details below)
                     <input type="hidden" name="_target_path" value="/account" />
                     #}
-
-                    <button class="login" type="submit">login</button>
-                    <button class="forgotPassword" type="reset">Reset</button>
+                    <button class="login" type="submit">Login</button>
+                    <button class="forgotPassword" type="button">Forgot Password</button>
                 </fieldset>
             </form>
         </div>
     </div>
-
 {% endblock %}
 
 <style>
-    body { background: #880000; font: 18px/1.5 sans-serif; }
+    {#body { background: #880000; font: 18px/1.5 sans-serif; }#}
     #wrapper {
         background: #D4D4D4;
         margin: 8em auto;
