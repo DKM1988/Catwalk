@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<title>Log New Fault</title>
-<link rel="stylesheet" type="text/css" href="{{ asset('/bun') }}"
-<div id="wrapper">
-    <div id="container">
-        <h1>Log a new CCTV Camera Fault</h1>
+    <title>Log New Fault</title>
+        <body>
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/newfault.css') }}" />
+        <div id="wrapper">
+            <div id="container">
+            <h1>Log new CCTV Camera Fault</h1>
             <fieldset>
                 <label>Camera Number</label>
                 <input class="cameraNumber" type="text" id="cameraNumber"/>
@@ -17,163 +18,11 @@
                 <br>
                 <label>Description of Fault</label>
                 <input class="description" type="text" id="location"/>
-                <label value="{{ state }}"</label>
                 <a href="#" class="logFault">Log Fault</a>
-                <a hfrf="http://localhost:8000" class="clear">Clear Form</a>
+                <a href="http://localhost:8000/" class="clear">Clear Form</a>
                 <a href="http://localhost:8000/" class="home">Home</a>
             </fieldset>
-    </div>
-</div>
+            </div>
+        </div>
+        </body>
 </html>
-
-<style>
-    /*
-    * containers
-    */
-    body { background: #880000; font: 18px/1.5 sans-serif; }
-    #wrapper {
-        background: #D4D4D4;
-        margin: 9em auto;
-        width: 500px;
-        height: 400px;
-        padding: 5px }
-    #container { padding: 25px; }
-    fieldset { border: double; border-color: orange; height: 200px; padding-top: 20px; }
-    /*
-    label headers
-    */
-    h1 {
-        font-size: 30px;
-        font-family: "Times New Roman";
-        text-align: center;
-        font-style: italic;
-        font-weight: bold}
-    h2 {
-
-    }
-    label {
-        font-size: 20px;
-        padding: 0px;
-        font-family: "Times New Roman";
-        color: #CC7832;
-        font-style: italic;
-        font-weight: bold
-    }
-
-    /*
-    * text box classes
-    */
-    .cameraNumber {
-        position: relative;
-        width: 200px;
-        left: 40px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    .dss {
-        position: relative;
-        width: 200px;
-        left: 141px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    .location {
-        position: relative;
-        width: 200px;
-        left: 105px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    .description {
-        position: relative;
-        width: 200px;
-        left: 10px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    /*
-    * Buttons
-    */
-    .logFault {
-        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        background-color:#a73f2d;
-        border:1px solid #241d13;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:15px;
-        font-weight:bold;
-        padding:9px 23px;
-        text-decoration:none;
-        text-shadow:0px -1px 0px #7a2a1d;
-        position: relative;
-        top: 28px;
-    }
-    .logFault:hover {
-        background-color:#b34332;
-    }
-    .logFault:active {
-        position:relative;
-        top:29px;
-    }
-
-    .clear {
-        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        background-color:#a73f2d;
-        border:1px solid #241d13;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:15px;
-        font-weight:bold;
-        padding:9px 23px;
-        text-decoration:none;
-        text-shadow:0px -1px 0px #7a2a1d;
-        position: relative;
-        top: 28px;
-    }
-    .clear:hover {
-        background-color:#b34332;
-    }
-    .clear:active {
-        position:relative;
-        top:29px;
-    }
-
-    .home {
-        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        box-shadow:inset 0px 34px 0px -15px #b54b3a;
-        background-color:#a73f2d;
-        border:1px solid #241d13;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:15px;
-        font-weight:bold;
-        padding:9px 23px;
-        text-decoration:none;
-        text-shadow:0px -1px 0px #7a2a1d;
-        position: relative;
-        top: 28px;
-    }
-    .home:hover {
-        background-color:#b34332;
-    }
-    .home:active {
-        position:relative;
-        top:29px;
-    }
-</style>
-
-
-
-

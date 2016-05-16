@@ -28,13 +28,10 @@ class DefaultController extends Controller
         $templating = $this->container->get('templating');
         $html = $templating->render("default/newfault.html.twig");
         //test mysql connection
-        $state = $this->mysqlConn();
+        //$state = $this->mysqlConn();
         
-        return $this->render('default/newfault.html.twig',
-            array(
-                'state' => $state
-            )
-        );
+        return new Response($html);
+
     }
 
     public function mysqlConn()
