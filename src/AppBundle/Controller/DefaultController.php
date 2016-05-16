@@ -20,8 +20,6 @@ class DefaultController extends Controller
         ]);
     }
 
-    
-
     /**
      * @Route("/new_fault", name="New Fault")
      */
@@ -29,14 +27,31 @@ class DefaultController extends Controller
     {
         $templating = $this->container->get('templating');
         $html = $templating->render("default/newfault.html.twig");
-
-
-
-        return new Response($html);
-    }
-    
-    public function mysqlTest()
-    {
+        //test mysql connection
+        $state = $this->mysqlConn();
         
+        return $this->render('default/newfault.html.twig',
+            array(
+                'state' => $state
+            )
+        );
     }
+
+    public function mysqlConn()
+    {
+        $mysqli = mysqli_connect('elrond.aserv.co.za', 'mynethqk_admin', 'Zeyao=Ecmho8', 'mynethqk_catwalk');
+
+        if ($mysqli->connect_error)
+        {
+            $state = "Failed to connect: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+        }
+        else 
+        {
+            $state = $mysqli->host_info;
+        }
+        
+        return($state);
+
+    }
+
 }
