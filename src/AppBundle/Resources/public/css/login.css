@@ -1,12 +1,12 @@
 body {
-    background-image: url("http://localhost:8000/images/background.jpg");
+    background-image: url("http://mynetspace.co.za/resources/background.jpg");
     background-size: cover;
 }
 #wrapper {
     background: #D4D4D4;
     margin: 7em auto;
     width: 350px;
-    height: 330px;
+    height: 320px;
     border-radius: 20px}
 #container {padding: 1em;
     border-radius: 50px}
@@ -39,7 +39,7 @@ fieldset { border: double;
     font-family: "Verdana";
     font-style: italic;
     font-weight: bold;
-    top: 13px;
+    top: 20px;
     left: 13px;
     color: black; }
 
@@ -62,7 +62,7 @@ h2 { font-size: 18px;
 
 .password {
     position: relative;
-    top: 13px;
+    top: 20px;
     left: 24px;
     width: 150px;
     text-align: center;
@@ -81,11 +81,12 @@ h2 { font-size: 18px;
     font-family:Arial;
     font-size:15px;
     font-weight:bold;
-    padding:9px 23px;
+    padding:9px 26px;
     text-decoration:none;
     text-shadow:0px -1px 0px #7a2a1d;
     position: relative;
     top: 22px;
+    left: 5px;
 }
 .login:hover {
     background-color:#b34332;
@@ -114,7 +115,7 @@ h2 { font-size: 18px;
     text-shadow:0px -1px 0px #7a2a1d;
     position: relative;
     top: 22px;
-    left: 5px;
+    left: 7px;
 }
 .forgotPassword:hover {
     background-color:#b34332;
