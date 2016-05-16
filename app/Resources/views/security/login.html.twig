@@ -1,13 +1,20 @@
-{% block body %}
+<!DOCTYPE html>
+<html>
+    <title>Login</title>
+        <body>
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/login.css') }}" />
+                {% block body %}
     <div id="wrapper">
         <div id="container">
             <form action="{{ path('login') }}" method="post">
-                <h1>Login Required</h1>
+                <h1>User Login Required</h1>
                 <fieldset>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="_username" value="{{ last_username }}" />
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="_password" />
+                    <div id="credentials">
+                    <label class="lblUsername" for="username">Username</label>
+                    <input type="text" class="username" id="username" name="_username" value="{{ last_username }}" />
+                    <label class="lblPassword" for="password">Password</label>
+                    <input type="password" class="password" id="password" name="_password" />
+                    </div>
                     {#
                     If you want to control the URL the user
                     is redirected to on success (more details below)
@@ -20,36 +27,79 @@
         </div>
     </div>
 {% endblock %}
+</body>
+</html>
 
+{#
 <style>
-    body { background: #880000; font: 18px/1.5 sans-serif; }
+
+    body {
+        background-image: url({{ asset('bundles/app/images/background.jpg') }});
+        background-size: cover;
+        font: 18px/1.5 sans-serif; }
+
     #wrapper {
         background: #D4D4D4;
-        margin: 8em auto;
+        margin: 7em auto;
         width: 350px;
-        height: 350px;
-        padding: 0px }
-    #container {
-        padding: 1em }
+        height: 330px;
+        border-radius: 20px}
+    #container {padding: 1em;
+        border-radius: 50px}
+
+    #credentials {
+        background-color: grey;
+        border-radius: inherit;
+        height: 80px;
+    }
+
     legend { font-size: 20px}
-    fieldset { border: double; border-color: #910b8e; height: 170px }
-    label {font-size: 18px; padding: 10px; font-family: "Times New Roman"; font-style: italic; font-weight: bold;
-    color: #916319;}
-    h1 { font-size: 30px; text-align: center; font-family: "Times New Roman"; font-style: italic; color: #CC7832 }
-    h2 { font-size: 18px; text-align: left; }
+
+    fieldset { border: double;
+        border-color: #910b8e;
+        height: 145px;
+        border-radius: 20px;
+        padding-top: 25px }
+
+    .lblUsername {font-size: 15px;
+        position: relative;
+        top: 12px;
+        left: 13px;
+        font-family: "Verdana";
+        font-style: italic;
+        font-weight: bold;
+        color: black; }
+
+    .lblPassword {font-size: 15px;
+        position: relative;
+        font-family: "Verdana";
+        font-style: italic;
+        font-weight: bold;
+        top: 13px;
+        left: 13px;
+        color: black; }
+
+    h1 { font-size: 26px;
+        text-align: center;
+        font-family: "Verdana";
+        font-style: italic;
+        color: #CC7832 }
+
+    h2 { font-size: 18px;
+        text-align: left; }
 
     .username {
         position: relative;
-        top: 00px;
-        left: 2px;
+        top: 12px;
+        left: 20px;
         width: 150px;
         text-align: center;
     }
 
     .password {
         position: relative;
-        top: 0px;
-        left: 6px;
+        top: 13px;
+        left: 24px;
         width: 150px;
         text-align: center;
     }
@@ -60,6 +110,7 @@
         box-shadow:inset 0px 34px 0px -15px #b54b3a;
         background-color:#a73f2d;
         border:1px solid #241d13;
+        border-radius: inherit;
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
@@ -70,14 +121,14 @@
         text-decoration:none;
         text-shadow:0px -1px 0px #7a2a1d;
         position: relative;
-        top: 30px;
+        top: 22px;
     }
     .login:hover {
         background-color:#b34332;
     }
     .login:active {
         position:relative;
-        top:29px;
+        top:25px;
     }
 
 
@@ -87,6 +138,7 @@
         box-shadow:inset 0px 34px 0px -15px #b54b3a;
         background-color:#a73f2d;
         border:1px solid #241d13;
+        border-radius: inherit;
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
@@ -97,15 +149,17 @@
         text-decoration:none;
         text-shadow:0px -1px 0px #7a2a1d;
         position: relative;
-        top: 30px;
+        top: 22px;
+        left: 5px;
     }
     .forgotPassword:hover {
         background-color:#b34332;
     }
     .forgotPassword:active {
         position: relative;
-        top:29px;
+        top:25px;
     }
 
 
 </style>
+#}

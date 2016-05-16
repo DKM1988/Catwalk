@@ -1,0 +1,125 @@
+body {
+    background-image: url("http://localhost:8000/images/background.jpg");
+    background-size: cover;
+}
+#wrapper {
+    background: #D4D4D4;
+    margin: 7em auto;
+    width: 350px;
+    height: 330px;
+    border-radius: 20px}
+#container {padding: 1em;
+    border-radius: 50px}
+
+#credentials {
+    background-color: grey;
+    border-radius: inherit;
+    height: 80px;
+}
+
+legend { font-size: 20px}
+
+fieldset { border: double;
+    border-color: #910b8e;
+    height: 145px;
+    border-radius: 20px;
+    padding-top: 25px }
+
+.lblUsername {font-size: 15px;
+    position: relative;
+    top: 12px;
+    left: 13px;
+    font-family: "Verdana";
+    font-style: italic;
+    font-weight: bold;
+    color: black; }
+
+.lblPassword {font-size: 15px;
+    position: relative;
+    font-family: "Verdana";
+    font-style: italic;
+    font-weight: bold;
+    top: 13px;
+    left: 13px;
+    color: black; }
+
+h1 { font-size: 26px;
+    text-align: center;
+    font-family: "Verdana";
+    font-style: italic;
+    color: #CC7832 }
+
+h2 { font-size: 18px;
+    text-align: left; }
+
+.username {
+    position: relative;
+    top: 12px;
+    left: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.password {
+    position: relative;
+    top: 13px;
+    left: 24px;
+    width: 150px;
+    text-align: center;
+}
+
+.login {
+    -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    border:1px solid #241d13;
+    border-radius: inherit;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+    position: relative;
+    top: 22px;
+}
+.login:hover {
+    background-color:#b34332;
+}
+.login:active {
+    position:relative;
+    top:25px;
+}
+
+
+.forgotPassword {
+    -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    border:1px solid #241d13;
+    border-radius: inherit;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+    position: relative;
+    top: 22px;
+    left: 5px;
+}
+.forgotPassword:hover {
+    background-color:#b34332;
+}
+.forgotPassword:active {
+    position: relative;
+    top:25px;
+}
