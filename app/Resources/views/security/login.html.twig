@@ -5,6 +5,10 @@
 {% endblock %}
 
 {% block body %}
+    {% if error %}
+        <div class="error">{{ error.message }}</div>
+    {% endif %}
+
     <div id="wrapper">
         <div id="container">
             <form action="{{ path('login') }}" method="post">

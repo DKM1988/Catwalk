@@ -8,16 +8,28 @@ security:
             memory: ~
 
     firewalls:
+
+        login_firewall:
+            pattern: ^/login$
+            anonymous: ~
+
+        secured_area:
+            pattern: ^/
+            form_login:
+                check_path: login_check
+                login_path: login
         # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+        #dev:
+        #    pattern: ^/(_(profiler|wdt)|css|images|js)/
+        #    security: false
 
         main:
             anonymous: ~
-            form_login:
-                login_path: login
-                check_path: login
+            #form_login:
+            #    login_path: login
+            #    check_path: login
+
+
             # activate different ways to authenticate
 
             # http_basic: ~
