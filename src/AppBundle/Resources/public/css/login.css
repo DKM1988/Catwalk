@@ -27,7 +27,7 @@ fieldset { border: double;
 
 .lblUsername {font-size: 15px;
     position: relative;
-    top: 12px;
+    top: 16px;
     left: 13px;
     font-family: "Verdana";
     font-style: italic;
@@ -39,7 +39,7 @@ fieldset { border: double;
     font-family: "Verdana";
     font-style: italic;
     font-weight: bold;
-    top: 20px;
+    top: 24px;
     left: 13px;
     color: black; }
 
@@ -54,7 +54,7 @@ h2 { font-size: 18px;
 
 .username {
     position: relative;
-    top: 12px;
+    top: 16px;
     left: 20px;
     width: 150px;
     text-align: center;
@@ -62,7 +62,7 @@ h2 { font-size: 18px;
 
 .password {
     position: relative;
-    top: 20px;
+    top: 24px;
     left: 24px;
     width: 150px;
     text-align: center;

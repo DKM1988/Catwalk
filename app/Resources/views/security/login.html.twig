@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <title>User Login</title>
-        <body>
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/login.css') }}" />
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/login.css') }}" />
+{% endblock %}
+
+{% block body %}
     <div id="wrapper">
         <div id="container">
             <form action="{{ path('login') }}" method="post">
@@ -20,5 +22,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
