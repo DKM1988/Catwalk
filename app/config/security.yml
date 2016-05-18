@@ -1,18 +1,17 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    encoders:
+        AppBundle\Entity\User:
+            algorithm: bcrypt
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-            in_memory:
-                memory:
-                    users:
-                        user:
-                            password: user
-                            roles: 'ROLE_USER'
-                        admin:
-                            password: kitten
-                            roles: 'ROLE_ADMIN'
+            pdo_mysql:
+                entity:
+                    class: AppBundle\AppBundle:User
+                    property: username
+
 
     firewalls:
         login_firewall:
@@ -32,7 +31,9 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            pattern: ^/
+            http_basic: ~
+            provider: pdo_mysql
 
             #form_login:
             #    login_path: login
