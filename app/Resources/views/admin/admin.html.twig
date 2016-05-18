@@ -1,18 +1,31 @@
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/admin.css') }}">
+    {% endblock %}
 {% block body %}
     <div id="wrapper">
         <div id="container">
-            <form action="{{ path('login') }}" method="post">
-                <h1>User Login Required</h1>
-                <fieldset>
+            <form action="{{ path('Dashboard') }}" method="post">
+                <h1>Add New User</h1>
+                    <fieldset>
                     <div id="credentials">
                         <label class="lblUsername" for="username">Username</label>
                         <input type="text" class="username" id="username" name="_username" />
                         <label class="lblPassword" for="password">Password</label>
-                        <input type="password" class="password" id="password" name="_password" />
+                        <input type="password" class="password" id="password" name="_password" /><br>
+                        <label class="lblEmail" for="email">Email</label>
+                        <input type="text" class="email" id="email" name="email" /><br>
+                        <label class="lblName" for="firstName">First Name</label>
+                        <input type="text" class="name" id="firstName" name="_name" /><br>
+                        <label class="lblSurname" for="lastName">Last Name</label>
+                        <input type="text" class="surname" id="lastName" name="_name" /><br>
+                        <label class="lblAdmin" for="isAdmin">Admin User</label>
+                        <input type="checkbox" class="admin" id="admin" name="Admin User" /><br>
+                        <button class="createUser" type="submit">Add User</button>
+                        <button class="clearForm" type="button">Clear Fields</button>
                     </div>
-                    <button class="login" type="submit">Login</button>
-                    <button class="forgotPassword" type="button">Forgot Password</button>
-                </fieldset>
+                        </fieldset>
+
+
             </form>
         </div>
     </div>

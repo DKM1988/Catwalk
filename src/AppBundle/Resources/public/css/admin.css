@@ -2,12 +2,215 @@ body {
     background-image: url("http://mynetspace.co.za/resources/background.jpg");
     background-size: cover;
 }
+
+h1 { font-size: 26px;
+    text-align: center;
+    font-family: "Verdana";
+    font-style: italic;
+    color: #CC7832 }
+
 #wrapper {
     background: #D4D4D4;
     margin: 7em auto;
     width: 350px;
-    height: 320px;
-    border-radius: 20px}
-#container {padding: 1em;
-    border-radius: 50px
+    height: 360px;
+    border-radius: 20px;
+    padding: 2px}
+#container {
+    border-radius: 50px;
+    padding: 5px 5px 5px 5px;
+}
+
+fieldset { border: double;
+    border-color: #102291;
+    height: 220px;
+    border-radius: 20px;
+    padding-top: 10px;  }
+
+#credentials {
+    background-color: grey;
+    height: 160px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: Verdana;
+    text-align: center;
+    font-style: italic;
+}
+
+.username {
+    width: 160px;
+    position: relative;
+    text-align: center;
+    left: 30px;
+    top: 14px;
+}
+
+.password {
+    width: 160px;
+    position: relative;
+    text-align: center;
+    left: 33px;
+    top: 16px;
+}
+
+.email {
+    width: 160px;
+    position: relative;
+    text-align: center;
+    left: 69px;
+    top: 18px;
+}
+
+.name {
+    width: 160px;
+    position: relative;
+    text-align: center;
+    left: 23px;
+    top: 20px;
+}
+
+.surname {
+    width: 160px;
+    position: relative;
+    text-align: center;
+    left: 26px;
+    top: 22px;
+}
+
+.admin {
+    position: relative;
+    text-align: center;
+    left: 15px;
+    top: 24px;
+}
+
+
+.lblUsername {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 14px;
+}
+
+.lblPassword {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 16px;
+}
+
+.lblEmail {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 18px;
+}
+
+.lblName {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 20px;
+}
+
+.lblName {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 22px;
+}
+
+.lblSurname {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 24px;
+}
+
+.lblAdmin {
+    font-family: Verdana;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 26px;
+}
+
+.createUser {
+    -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    border:1px solid #241d13;
+    border-radius: inherit;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 26px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+    position: relative;
+    top: 60px;
+    left: 20px;
+}
+.createUser:hover {
+    background-color:#b34332;
+}
+.createUser:active {
+    position:relative;
+    top: 62px;
+}
+
+
+.clearForm {
+    -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    border:1px solid #241d13;
+    border-radius: inherit;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+    position: relative;
+    top: 60px;
+    left: 30px;
+}
+.clearForm:hover {
+    background-color:#b34332;
+}
+.clearForm:active {
+    position: relative;
+    top: 62px;
 }
