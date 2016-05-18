@@ -3,8 +3,9 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
-
 
 /**
  * Class user
@@ -56,9 +57,26 @@ class User implements UserInterface, \Serializable
      */
     private $isAdmin;
 
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
+
     public function __construct()
     {
         $this->isActive = true;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail()
+    {
+        $this->setEmail();
     }
 
     public function getUsername()
@@ -66,9 +84,19 @@ class User implements UserInterface, \Serializable
         $this->getUsername();
     }
 
-    public function getSalt()
+    public function setUsername($username)
     {
-        return null;
+        $this->username = $username;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
     }
 
     public function getPassword()
@@ -84,6 +112,11 @@ class User implements UserInterface, \Serializable
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getSalt()
+    {
+        return null;
     }
 
     /** @see \Serializable::serialize() */
