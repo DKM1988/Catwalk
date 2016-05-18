@@ -8,6 +8,7 @@ h1 { font-size: 36px; }
 h2 { font-size: 25px; margin-bottom: 1em; }
 h3 { font-size: 20px; }
 h4 { font-size: 15px; }
+h5 {font-family: Verdana; font-size: 18px }
 p { margin: 0 0 1em 0; }
 a { color: #0000F0; }
 a:hover { text-decoration: none; }
