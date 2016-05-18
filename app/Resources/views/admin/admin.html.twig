@@ -1,0 +1,19 @@
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <form action="{{ path('login') }}" method="post">
+                <h1>User Login Required</h1>
+                <fieldset>
+                    <div id="credentials">
+                        <label class="lblUsername" for="username">Username</label>
+                        <input type="text" class="username" id="username" name="_username" />
+                        <label class="lblPassword" for="password">Password</label>
+                        <input type="password" class="password" id="password" name="_password" />
+                    </div>
+                    <button class="login" type="submit">Login</button>
+                    <button class="forgotPassword" type="button">Forgot Password</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}

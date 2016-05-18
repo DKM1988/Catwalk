@@ -1,0 +1,13 @@
+body {
+    background-image: url("http://mynetspace.co.za/resources/background.jpg");
+    background-size: cover;
+}
+#wrapper {
+    background: #D4D4D4;
+    margin: 7em auto;
+    width: 350px;
+    height: 320px;
+    border-radius: 20px}
+#container {padding: 1em;
+    border-radius: 50px
+}

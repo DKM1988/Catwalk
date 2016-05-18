@@ -43,7 +43,17 @@ class DefaultController extends Controller
         //$state = $this->mysqlConn();
         
         return new Response($html);
+    }
 
+    /**
+     * @Route("/admin", name="Dashboard")
+     */
+    public function adminAction()
+    {
+        $templating = $this->container->get('templating');
+        $html = $templating->render("admin/admin.html.twig");
+
+        return new Response($templating->render("admin/admin.html.twig"));
     }
     
     public function mysqlConn()
