@@ -57,6 +57,12 @@ class User implements UserInterface, \Serializable
      */
     private $isAdmin;
 
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
 
     public function __construct()
     {
@@ -269,5 +275,17 @@ class User implements UserInterface, \Serializable
     public function getIsAdmin()
     {
         return $this->isAdmin;
+    }
+
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+        
+        return $this;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->getPlainPassword();
     }
 }

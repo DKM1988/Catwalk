@@ -9,15 +9,11 @@ security:
     providers:
             pdo_mysql:
                 entity:
-                    class: AppBundle\AppBundle:User
+                    class: AppBundle:User
                     property: username
 
 
     firewalls:
-        login_firewall:
-            pattern: ^/login$
-            anonymous: ~
-
         secured_area:
             pattern: ^/
             http_basic: ~

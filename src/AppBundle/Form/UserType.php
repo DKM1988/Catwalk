@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -16,10 +17,10 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class)
-            ->add('username', TextType::class)
+            ->add('username', TextareaType::class)
             ->add('plainPassword', RepeatedType::class, array(
                     'type' => PasswordType::class,
-                    'first_options' => array('label' => 'Password'),
+                    'first_options'  => array('label' => 'Password'),
                     'second_options' => array('label' => 'Repeat Password'),
                 )
             );
@@ -28,8 +29,7 @@ class UserType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-                'data_class' => 'AppBundle\Entity\User'
-            )
-        );
+            'data_class' => 'AppBundle\Entity\User',
+        ));
     }
 }
